@@ -23,6 +23,7 @@ urlpatterns = [
     path('api/v1/', include('rest_framework.urls')),
     path('api/v1/food/', include('food.urls')),
     path('api/v1/auth/', include('dj_rest_auth.urls')),
+    path('api/v1/profile/', include('userprofile.urls')),
     path('api/v1/auth/registration/', include('dj_rest_auth.registration.urls')),
 
 ]
