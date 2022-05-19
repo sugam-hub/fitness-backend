@@ -8,6 +8,8 @@ class Food(models.Model):
     name = models.CharField(_("Food Name"), max_length=50)
     time = models.CharField(_("Duation"), max_length=50)
     kcal = models.CharField(_("K CAL"), max_length=50)
+    bmi_affection_rate = models.FloatField(
+        _("BMI Affection Rate"), max_length=10, default=0)
     description = models.TextField(_("Food Description"))
     photo = models.ImageField(upload_to='media/food-images')
 
