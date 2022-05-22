@@ -18,6 +18,9 @@ class Profile(models.Model):
     country = models.CharField(
         _("Country"), max_length=50, null=True, blank=True)
     city = models.CharField(_("City"), max_length=50, null=True, blank=True)
+    bmi = models.CharField(_("BMI"), max_length=50, null=True, blank=True)
+    calories = models.CharField(
+        _("Calories"), max_length=50, null=True, blank=True)
     user = models.OneToOneField(
         User, on_delete=models.CASCADE, null=False, blank=True)
     # photo = models.ImageField(upload_to='media/food-images')
