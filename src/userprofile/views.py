@@ -14,8 +14,10 @@ class ProfileRetrieveUpdateAPIView(RetrieveUpdateAPIView):
     permission_classes = [IsAuthenticated]
 
     def get_object(self):
-        profile, created = Profile.objects.get_or_create(
+        print(self.request.user)
+        profile = Profile.objects.get(
             user=self.request.user)
+        print(profile)
         return profile
 
     def update(self, request, *args, **kwargs):

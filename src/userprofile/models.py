@@ -30,7 +30,7 @@ class Profile(models.Model):
         verbose_name_plural = _("Profile")
 
     def __str__(self):
-        return self.firstname
+        return str(self.id)
 
 
 def create_profile(sender, instance, created, **kwargs):
