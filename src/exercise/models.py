@@ -12,12 +12,12 @@ class Exercise(models.Model):
         _("BMI Affection Rate"), max_length=10, default=0)
     photo = models.ImageField(upload_to='media/exercise-images')
 
-    # class Meta:
-    #     verbose_name = _("Exercise")
-    #     verbose_name_plural = _("Exercise")
+    class Meta:
+        verbose_name = _("Exercise")
+        verbose_name_plural = _("Exercise")
 
-    # def __str__(self):
-    #     return self.name
+    def __str__(self):
+        return self.name
 
-    # def get_absolute_url(self):
-    #     return reverse("Exercise_detail", kwargs={"pk": self.pk})
+    def get_absolute_url(self):
+        return reverse("Exercise_detail", kwargs={"pk": self.pk})
